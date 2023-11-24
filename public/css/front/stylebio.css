@@ -1,0 +1,236 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 60px; /* Höjden på footern */
+    font-family: "Times New Roman", Times, serif;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+}
+
+header {
+    background-color: z;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    position: relative;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-logo {
+    width: 200px;
+    height: 80px;
+    margin-top: 15px;
+    background-image: url("TCI-Logo-White.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color: #85d44e;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media (max-width: 991px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-image: url("brokenglass.png");
+        background-color: rgba(65, 66, 79, 0.5);
+        background-size: cover;
+        background-position: center;
+        backdrop-filter: blur(5px);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(18, 20, 36, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+}
+
+.row {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 80%;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px 30px;
+}
+
+.row .left {
+    overflow: hidden;
+}
+
+.row .left img {
+    margin-top: 15%;
+    width: 80%;
+    object-fit: cover;
+    border-radius: 2px;
+    border: 1px solid #000000;
+}
+
+@media (max-width: 991px) {
+    .row .left img {
+        margin-top: 80px;
+        margin-left: 55%;
+        transform: translateX(-50%);
+    }
+
+}
+
+.row .right {
+    display: flex;
+    align-items: center;
+}
+
+.row .right .content {
+    padding-left: 20px;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+.row .right .content p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    padding-bottom: 15px;
+}
+
+@media (max-width: 991px) {
+    .row .right .content {
+        padding-left: 0px;
+    }
+    .row .right .content {
+      margin-top: 0%;
+  }
+}
+
+@media (max-width: 991px) {
+    .row {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+    .row .right .content h1 {
+      margin-left: 63%;
+        transform: translateX(-50%);
+    }
+    .row .right .content p {
+      margin-left: 15%;
+    }
+    
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}

@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+/* Navigeringsmeny */
+header {
+  background-color: #262626;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  position: relative;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-logo {
+  width: 200px;
+height: 80px;
+margin-top: 15px;
+background-image: url('TCI-Logo-White.png');
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.nav-link {
+  transition: 0.7s ease;
+}
+
+.nav-link:hover {
+  color: #85d44e;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+@media(max-width:768px) {
+  .hamburger {
+      display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-image: url("brokenglass.png");
+    background-color: rgba(65, 66, 79, 0.5);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+  .nav-item {
+      margin: 16px 0;
+  }
+
+  .nav-menu.active {
+      left: 0;
+  }
+}
+
+.navbar {
+min-height: 70px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 24px;
+transition: all 0.3s ease-in-out;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+background-color: rgba(18, 20, 36, 0.5);
+backdrop-filter: blur(5px);
+z-index: 999;
+}
+
+/* Bokningstext */
+.booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: large;
+  width: 250px;
+  padding: 25px;
+  background-color: rgba(18, 20, 36, 0.5);
+  border-radius: 25px;
+
+}
+
+.booking h1{
+  text-align: center;
+}
+
+.underline {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 200px;
+  border-bottom: 2px solid white;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}

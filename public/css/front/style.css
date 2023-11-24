@@ -1,0 +1,587 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+/* Navigeringsmeny */
+header {
+    background-color: #262626;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.icon-img {
+    width: 6%;
+    margin-right: 2%;
+}
+
+.icon-img2 {
+    width: 1.8%;
+}
+
+#fb {
+    position: absolute;
+    right: 0;
+    left: 80%;
+    top: 7%;
+    pointer-events: auto;
+}
+
+#insta {
+    position: absolute;
+    right: 0;
+    left: 82.5%;
+    top: 7%;
+    pointer-events: auto;
+}
+
+#spoti {
+    position: absolute;
+    right: 0;
+    left: 85%;
+    top: 7%;
+    pointer-events: auto;
+}
+
+#yt {
+    position: absolute;
+    right: 0;
+    left: 87.5%;
+    top: 7%;
+    pointer-events: auto;
+}
+
+.hidden-icons {
+    text-align: center;
+    display: none;
+}
+
+.merch-img {
+    margin-bottom: -2%;
+    width: 10%;
+}
+
+.merch-img2 {
+    margin-bottom: -1%;
+    width: 12%;
+}
+
+.title {
+    margin-top: 2%;
+}
+.instacontainer {
+    filter: grayscale(80%);
+    margin-top: 3%;
+}
+.instafeed {
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 15%;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    position: relative;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-logo {
+    width: 200px;
+    height: 80px;
+    margin-top: 15px;
+    background-image: url("TCI-Logo-White.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color: #85d44e;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-image: url("brokenglass.png");
+        background-color: rgba(65, 66, 79, 0.5);
+        background-size: cover;
+        background-position: center;
+        backdrop-filter: blur(5px);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .instafeed {
+        width: 90% !important;
+        margin-bottom: 10%;
+    }
+
+    .mobil-icons {
+        margin-right: 3%;
+        font-size: x-large;
+    }
+
+    .hidden-icons {
+        margin-top: 3%;
+        display: block;
+    }
+}
+
+@media (max-width: 383px) {
+    .title-show {
+        font-size: 34px !important;
+    }
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url("brokenglass.png");
+    background-color: rgba(18, 20, 36, 0.5);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.navbar.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+/* Första sidan */
+.page1 {
+    background-color: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    pointer-events: none; /* gör att inga länkar/knappar fungerar utan kommando */
+}
+.page1 .band-bild {
+    width: 90%;
+    /* max-width: 100%; */
+}
+
+@media (max-width: 991px) {
+    .page1 .band-bild {
+        width: 100%;
+        margin-top: 14%;
+    }
+}
+
+.page1 .logo {
+    position: absolute;
+    width: 20%;
+    height: auto;
+    right: 0;
+    left: 40%;
+    top: 8%;
+    transform: translateY(-50%);
+    pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+    .page1 .logo {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.bio-link {
+    width: 0px;
+    position: absolute;
+    right: 0;
+    left: 10%;
+    top: 8%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5vw;
+    pointer-events: auto;
+}
+
+.news-link {
+    width: 0px;
+    position: absolute;
+    right: 0;
+    left: 20%;
+    top: 8%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5vw;
+    pointer-events: auto;
+}
+
+.news-link {
+    width: 0px;
+    position: absolute;
+    right: 0;
+    left: 20%;
+    top: 8%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5vw;
+    pointer-events: auto;
+}
+
+.contact-link {
+    width: 0px;
+    position: absolute;
+    right: 0;
+    left: 30%;
+    top: 8%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5vw;
+    pointer-events: auto;
+}
+
+.bio-link:hover,
+.news-link:hover,
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .bio-link,
+    .news-link,
+    .contact-link {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .bio-link {
+        left: 8%;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-link {
+        left: 18%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-link {
+        left: 28%;
+    }
+}
+
+.fa-facebook {
+    width: 0px;
+    position: absolute;
+    right: 0;
+    left: 80%;
+    top: 8%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5vw;
+    pointer-events: auto;
+}
+
+.fa-facebook:hover {
+    color: #3b5998;
+}
+
+.fa-instagram {
+    width: 0px;
+    position: absolute;
+    right: 0;
+    left: 82.5%;
+    top: 8%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5vw;
+    pointer-events: auto;
+}
+
+.fa-instagram:hover {
+    color: #e1306c;
+}
+
+.fa-spotify {
+    width: 0px;
+    position: absolute;
+    right: 0;
+    left: 85%;
+    top: 8%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5vw;
+    pointer-events: auto;
+}
+
+.fa-spotify:hover {
+    color: #1ed760;
+}
+
+.fa-youtube {
+    width: 0px;
+    position: absolute;
+    right: 0;
+    left: 87.5%;
+    top: 8%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5vw;
+    pointer-events: auto;
+}
+
+.fa-youtube:hover {
+    color: #ff0000;
+}
+
+@media (max-width: 768px) {
+    .page1 a img {
+        display: none;
+        pointer-events: none;
+    }
+}
+
+.merchKnapp {
+    position: absolute;
+    width: 25%;
+    right: 0;
+    left: 65%;
+    top: 75%;
+    background-color: rgba(255, 255, 255, 0.5); /* Bakgrundsfärg */
+    border: none; /* Ingen ram */
+    border-radius: 15px;
+    color: #000000; /* Textfärg */
+    padding: 1vw 1vw; /* Storlek på padding */
+    text-align: center; /* Centrerad text */
+    text-decoration: none; /* Ingen understrykning */
+    font-size: 2vw; /* Textstorlek */
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer; /* Pilpekare på hover */
+    pointer-events: auto;
+}
+
+.merchKnapp .fa-solid.fa-shirt {
+    margin-right: 10px;
+}
+
+.merchKnapp:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 2px 2px 10px #ffffff;
+}
+
+@media (max-width: 768px) {
+    .merchKnapp {
+        display: none;
+        pointer-events: none;
+    }
+}
+
+.hidden-merch-btn {
+    width: 47%;
+    height: 70px;
+    margin-top: 6%;
+    margin-left: 25%;
+}
+
+.merchKnapp2 {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8); /* Bakgrundsfärg */
+    border: none; /* Ingen ram */
+    border-radius: 15px;
+    color: #000000; /* Textfärg */
+    padding: 1vw 1vw; /* Storlek på padding */
+    text-align: center; /* Centrerad text */
+    text-decoration: none; /* Ingen understrykning */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5vw; /* Textstorlek */
+    cursor: pointer; /* Pilpekare på hover */
+    pointer-events: auto;
+}
+
+.merchKnapp2 .fa-solid.fa-shirt {
+    margin-right: 10px;
+}
+
+.merchKnapp2:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 2px 2px 10px #ffffff;
+}
+
+@media (max-width: 768px) {
+    .merchKnapp2 {
+        display: block;
+        pointer-events: none;
+    }
+}
+/*page2*/
+.page2 {
+    background-image:
+        url("TCI6BW.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin-top: 50px;
+}
+
+.page2 h1 {
+    font-family: "Times new roman";
+    margin: 0;
+    font-size: 50px;
+    text-shadow: 1px 0px 0px black;
+    text-align: center;
+    color: white;
+}
+.page2 .solidLine {
+    border-top: 1px solid white;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.tour-list1,
+.tour-list2 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
+.page2 h2 {
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+}
+
+/*Instagram-feed*/
+
+.instacontainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    filter: grayscale(70%);
+}
+
+.instafeed {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 25px;
+}
+
+.es-widget-header-container-template.es-header-container-responsive {
+    background-color: red !important;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}

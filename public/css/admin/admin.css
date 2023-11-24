@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.outer-container-2 {
+  flex: 1 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 30px 10%;
+    border: 2px solid black;
+    border-radius: 50px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 5px 5px;
+    width: 354px;
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 30px 10%;
+        border: 2px solid black;
+        border-radius: 50px;
+        font-family: 'Montserrat Alternates', sans-serif;
+        margin: 5px 5px;
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+}
+
+.mid-box {
+    margin: 10px 10px;
+    padding: 20px 20px;
+}
+
+/* Admin settings */
+.container-settings {
+    font-family: 'Montserrat Alternates', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    border: 2px solid black;
+    border-radius: 50px;
+    margin: 5px 5px;
+    width: 354px;
+}
+
+
+@media (min-width: 768px) {
+    .container-settings {
+        font-family: 'Montserrat Alternates', sans-serif;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+        border: 2px solid black;
+        border-radius: 50px;
+        margin: 5px 5px;
+        width: 100%;
+    }
+
+}
+
+.settings-header {
+    display: flex;
+    item-align: center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 50px;
+    width: 300px;
+}
+
+/* Tables */
+.tablecontainer{
+    background: #C3EEFF;
+      border-radius: 2%;
+      margin: 2% 2% 10% 2%;
+    padding: 10px 10px 10px 10px;
+  }
+  @media (max-width: 32rem) {
+    .table__heading {
+      display: none;
+    }
+    .table__content {
+      display: block;
+      padding: .5rem 0;
+    }
+    .table__row {
+      margin: .25rem 1rem;
+      padding: .5rem 0;
+      display: block;
+      border-bottom: 2px solid #FFC842;
+    }
+    .table__content:before {
+      content: attr(data-heading);
+      display: inline-block;
+      width: 5rem;
+      margin-right: .5rem;
+      color: #000000;
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    }
+  .innerCon{
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  /* // Tables */
